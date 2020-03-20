@@ -20,8 +20,18 @@ public boolean isOneToOne(String s1,String s2) {
 }
 
 public static void main(String[] args) {
+	if(args.length!=2) {
+		System.out.println("Please provide only two strings as an argument to the program and try again");
+		return;
+	}
 	main isOneToOneObject = new main();
-	boolean answer = isOneToOneObject.isOneToOne(args[0],args[1]);	 
-	System.out.println(answer);
+	try {
+		boolean answer = isOneToOneObject.isOneToOne(args[0],args[1]);	 
+		System.out.println(answer);
+	}catch (Exception exception) {
+        // Catch unexpected Exceptions.
+        System.out.println("Something went wrong with the program.You might get an idea from the description below");
+        System.out.println(exception);
+    }
 }
 }
